@@ -24,6 +24,10 @@ app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, 'build')));
 app.use('/itemRouter', indexRouter);
 
+app.use((req, res) => {
+    res.redirect("/");
+})
+
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`)
 });
