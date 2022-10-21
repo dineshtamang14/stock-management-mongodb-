@@ -10,5 +10,4 @@ pipeline {
                 sh 'docker run -itd -p 3000:3000 --name test dineshtamang14/stock:v1' 
             }
         }
-    }
 }
