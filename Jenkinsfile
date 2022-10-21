@@ -1,5 +1,6 @@
 pipeline {
-        agent {label 'master node'}
+    agent {label 'master node'}
+    stages {
         stage('Build') {
             steps {
                 sh 'docker build -t dineshtamang14/stock:v1 .'
@@ -10,4 +11,5 @@ pipeline {
                 sh 'docker run -itd -p 3000:3000 --name test dineshtamang14/stock:v1' 
             }
         }
+    }
 }
