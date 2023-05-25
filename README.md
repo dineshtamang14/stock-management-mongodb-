@@ -1,1 +1,1 @@
-# stock-management-mongodb-
+# stock-management-mongodb
